@@ -1,11 +1,18 @@
-import uvicorn
-from chatterbot.trainers import ListTrainer
 from fastapi import FastAPI, Request, Query
 from googletrans import Translator
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 translator = Translator()
 english_bot = ChatBot('Bot',
                       storage_adapter='chatterbot.storage.SQLStorageAdapter',
