@@ -1,9 +1,9 @@
 # mychatbot
 This project only works for python 3.7
 Follow step for install:
-1. open terminal in project and install lastest pip
+1. Open terminal in project and install lastest pip
 python -m pip install pip
-2. install requirements.txt
+2. Install requirements.txt
 python -m pip install -r requirements.txt
 3. To run the project, follow these steps:
 First, run train.py.
